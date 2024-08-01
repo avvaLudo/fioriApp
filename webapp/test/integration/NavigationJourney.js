@@ -1,23 +1,26 @@
-/*global QUnit*/
-
 sap.ui.define([
 	"sap/ui/test/opaQunit",
-	"./pages/App",
-	"./pages/View1"
-], function (opaTest) {
+	"./pages/App"
+], (opaTest) => {
 	"use strict";
 
-	QUnit.module("Navigation Journey");
+	QUnit.module("Navigation");
 
-	opaTest("Should see the initial page of the app", function (Given, When, Then) {
+	opaTest("Should open the Hello dialog", (Given, When, Then) => {
 		// Arrangements
-		Given.iStartMyApp();
+		Given.iStartMyUIComponent({
+			componentConfig: {
+				name: "project1"
+			}
+		});
+
+		//Actions
+		When.onTheAppPage.iPressTheSayHelloWithDialogButton();
 
 		// Assertions
-		Then.onTheAppPage.iShouldSeeTheApp();
-      	Then.onTheViewPage.iShouldSeeThePageView();
+		Then.onTheAppPage.iShouldSeeTheHelloDialog();
 
-		//Cleanup
+		// Cleanup
 		Then.iTeardownMyApp();
 	});
 });
