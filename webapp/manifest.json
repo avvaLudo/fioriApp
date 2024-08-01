@@ -85,8 +85,9 @@
               }
           },
           "invoice": {
-              "dataSource": "invoiceRemote"
-
+              "dataSource": "invoiceRemote",
+              "type": "sap.ui.model.json.JSONModel",
+				      "uri": "Invoices.json"
           }
       },
       "rootView": {
