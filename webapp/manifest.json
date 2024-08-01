@@ -104,29 +104,32 @@
       "routing": {
         "config": {
           "routerClass": "sap.m.routing.Router",
+          "type":"View",
           "viewType": "XML",
-          "async": true,
-          "viewPath": "project1.view",
+          "path": "project1.view",
           "controlAggregation": "pages",
-          "controlId": "app",
-          "clearControlAggregation": false
+          "controlId": "app"
         },
         "routes": [
           {
-            "name": "RouteView1",
-            "pattern": ":?query:",
-            "target": [
-              "TargetView1"
-            ]
+            "pattern": "",
+            "name": "overview",
+            "target": "overview"
+          },
+          {
+            "pattern": "detail/{invoicePath}",
+            "name": "detail",
+            "target": "detail"
           }
         ],
         "targets": {
-          "TargetView1": {
-            "viewType": "XML",
-            "transition": "slide",
-            "clearControlAggregation": false,
-            "viewId": "View1",
-            "viewName": "View1"
+          "overview": {
+            "id": "overview",
+            "name": "Overview"
+          },
+          "detail": {
+            "id": "detail",
+            "name": "Detail"
           }
         }
       }

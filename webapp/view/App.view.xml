@@ -3,16 +3,6 @@
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m">
         <Shell>
-            <App class="myAppDemoWT">
-                <pages>
-                    <Page title="{i18n>homePageTitle}">
-                        <content>
-                            <mvc:XMLView viewName="project1.view.View1"/>
-                            <mvc:XMLView
-                                    viewName="project1.view.InvoiceList"/>
-                        </content>
-                    </Page>
-                </pages>
-            </App>
+            <App class="myAppDemoWT" id="app"/>
         </Shell>
 </mvc:View>
