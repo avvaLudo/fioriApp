@@ -6,7 +6,8 @@ sap.ui.define(
       "use strict";
   
       return BaseController.extend("project1.controller.App", {
-        onInit: function() {
+        onInit() {
+          this.getView().addStyleClass(this.getOwnerComponent().getContentDensityClass());
         }
       });
     }
