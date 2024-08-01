@@ -11,3 +11,9 @@ html[dir="ltr"] .myAppDemoWT .myCustomButton.sapMBtn {
     font-weight: bold;
  }
  
+ .myAppDemoWTProductRating {
+   padding: 0.75rem;
+}
+.myAppDemoWTProductRating .sapMRI {
+   vertical-align: initial;
+}
